@@ -1,0 +1,6 @@
+Unity2019.4.17f1
+Python 3.7.6
+CUDA v10.1
+mlagents==0.17.1 (PYPi)
+ML-Agent Release3
+Unity Package: MLAgents 1.0.2

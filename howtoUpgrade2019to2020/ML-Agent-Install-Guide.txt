@@ -1,0 +1,42 @@
+Before you start, make sure you have anaconda downloaded.
+
+If you haven't yet, open anaconda navigator at least once and close it.
+
+Then open the anaconda prompt
+
+*****copy and paste these commands into conda. Right click to paste in the conda
+ environment ***********
+
+
+conda create -n mlagent01 python=3.7
+
+conda activate mlagent01
+
+conda install git
+
+cd Documents
+
+git clone --branch release_18 https://github.com/Unity-Technologies/ml-agents.git
+
+cd ..
+
+pip3 install torch==1.8.2+cu111 torchvision==0.9.2+cu111 torchaudio===0.8.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
+
+
+python -m pip install mlagents==0.27.0
+
+******
+
+then, go into unity and open a new project. 
+
+under window > package manager, click settings gear in top right, go to advanced settings, and make sure "Enable Preview Packages"
+is checked.
+
+back in package manager, select ml-agents version 2.1.0
+
+finally, in your documents folder, go to ml-agents > Project > Assets and drag and drop the ML-Agents folder into your unity project.
+
+When you import, you'll have errors. in the unity project window, go to Assets > ML-Agents > Examples and delete the folder named PushBlockWithInput.
+This example was not updated properly in this build and will throw errors.
+
+Now, you can follow along the tutorial and train the 3D Ball example.

@@ -1,0 +1,18 @@
+activate mlagent02
+
+cd C:\Users\soomeen_hahm.ROBOT-1\Documents\MLAgents
+
+mlagents-learn C:\Users\soomeen_hahm.ROBOT-1\Documents\MLAgents\ml-agents-release_3\config\ppo\RobotReacher.yaml --run-id robot05
+
+mlagents-learn "C:\Users\soomeen_hahm.ROBOT-1\Documents\MLAgents\ml-agents-release_3\config\ppo\RobotReacher.yaml" --run-id=robot05 --resume
+
+
+
+
+activate mlagent03
+
+cd C:\Users\soomeen_hahm.ROBOT-1\Documents\MLAgents\results
+
+tensorboard --logdir robot01
+
+http://localhost:6006/
