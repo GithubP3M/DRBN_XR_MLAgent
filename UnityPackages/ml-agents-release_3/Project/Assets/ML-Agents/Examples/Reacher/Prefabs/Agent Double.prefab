@@ -3191,8 +3191,8 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 4000
   pendulumlist: []
-  hand: {fileID: 0}
-  goal: {fileID: 0}
+  hand: {fileID: 8643095645389800801}
+  goal: {fileID: 3574102172672002623}
   RBlist: []
 --- !u!1 &6810255353868165889
 GameObject:

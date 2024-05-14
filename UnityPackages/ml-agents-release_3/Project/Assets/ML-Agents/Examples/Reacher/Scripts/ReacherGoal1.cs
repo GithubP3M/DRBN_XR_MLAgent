@@ -26,7 +26,7 @@ public class ReacherGoal1 : MonoBehaviour
     {
         if (other.gameObject == hand)
         {
-            agent.GetComponent<ReacherAgent1>().AddReward(0.01f);
+            agent.GetComponent<ReacherAgent2>().AddReward(0.01f);
         }
     }
 }
