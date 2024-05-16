@@ -111,9 +111,11 @@ public class ReacherAgent2 : Agent
 
         for (int i = 0; i < pendulumlist.Count; i++)
         {
-            var torqueX = Mathf.Clamp(continuousActionOut[0], -1f, 1f) * 150f;
-            var torqueZ = Mathf.Clamp(continuousActionOut[1], -1f, 1f) * 150f;
-            RBlist[i].AddTorque(new Vector3(torqueX, 0f, torqueZ));
+            //var torqueX = Mathf.Clamp(continuousActionOut[0], -1f, 1f) * 15f;
+            //var torqueZ = Mathf.Clamp(continuousActionOut[1], -1f, 1f) * 15f;
+            var torqueY = Mathf.Clamp(continuousActionOut[0], -1f, 1f) * 15f;
+            //RBlist[i].AddTorque(new Vector3(torqueX, 0f, torqueZ));
+            RBlist[i].AddTorque(new Vector3(0f, torqueY, 0f));
         }
 
         //reward if system is closing the distance
@@ -128,6 +130,9 @@ public class ReacherAgent2 : Agent
             distref = hand.transform.position;
             Debug.Log("Distref "  + Distref);
         }
+        //else {
+        //    this.GetComponent<ReacherAgent2>().AddReward(-0.0001f);
+        //}
     }
 
     /// <summary>
